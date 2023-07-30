@@ -19,9 +19,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="fr">
       <body>
-        <div className="hidden lg:flex h-10 bg-blue-700 items-center">
+        <div className="hidden lg:flex h-10 bg-yellow-700 items-center">
           <div className="w-screen flex justify-around ">
             <div>
               <FontAwesomeIcon className="px-1" icon={faEnvelopeOpenText} />
@@ -51,7 +51,7 @@ export default function RootLayout({ children }) {
 
         {children}
 
-        <div className="flex h-screen justify-center items-end">
+        <div className="flex h-fit justify-center items-end">
           <small>
             Copyright &copy; 2023. All rights reserved by
             <span className="text-blue-400">
