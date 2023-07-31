@@ -2,13 +2,14 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="h-[40rem] bg-gradient-to-tl from-cyan-700 via-green-200 to-cyan-700">
-      <div className="relative top-28 flex ">
-        <h1 className="self-center pl-6 font-extrabold  text-4xl text-neutral-700">
-          Empowering the Future: Welcome to Africa Digital School, where
-          knowledge meets innovation, and dreams take flight!
+    <main className="h-[80rem]  bg-gradient-to-b from-heroBg to-white">
+      <div className="sm:px-24 md:px-14 md:flex-row gap-24  pt-16 sm:pt-38  top-0 flex flex-col">
+        <h1 className="self-center w-full font-extrabold text-2xl sm:text-3xl lg:text-4xl px-5 text-veryTop">
+          Empowering the Future: <br /> 
+          <span className="text-emerald-800"> Welcome to Africa Digital Farming School</span>
         </h1>
         <Image
+          className="w-full"
           src="/assets/adfLogo.png"
           alt="adf logo"
           width={600}

@@ -1,5 +1,5 @@
 import "./globals.css";
-import "@fortawesome/fontawesome-svg-core/styles.css";
+// import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelopeOpenText, faPhone } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fr">
       <body>
-        <div className="hidden lg:flex h-10 bg-yellow-700 items-center">
+        <div className="lg:flex hidden h-10 bg-veryTop items-center relative z-50">
           <div className="w-screen flex justify-around ">
             <div>
               <FontAwesomeIcon className="px-1" icon={faEnvelopeOpenText} />
@@ -47,6 +47,9 @@ export default function RootLayout({ children }) {
           </div>
         </div>
         <Header />
+        <div className="bg-heroBg h-40 sm:h-28 ">
+
+        </div>
         
 
         {children}
