@@ -1,8 +1,6 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import news from "./data/news.json";
+import news from "../../public/data/news.json";
 
 export default function Home() {
   return (
@@ -30,17 +28,17 @@ export default function Home() {
 
       <div className="my-4">
         <ul className="gap-5 py-10 grid grid-cols-1 md:grid-cols-2 justify-center">
-          {news.map((news) => (
-            <li key={news.id} >
-              <Link href={`/adfschool/news/${news.id}`} className='flex flex-row gap-7 py-4 hover:scale-y-110 backdrop-blur-md'>
+          {news.map((newsItem) => (
+            <li key={newsItem.id} >
+              <Link href={'/adfSchool/news/' + newsItem.id} className='flex flex-row gap-7 py-4 hover:scale-y-110 backdrop-blur-md'>
                 <img
                   className="max-w-[7rem] max-h-[5rem] flex-1"
-                  src={news.image}
+                  src={newsItem.image}
                   alt="f"
                 />
                 <div className="flex-1">
-                  <p className="text-slate-600 font-mono pb-4">{news.date}</p>
-                  <p className="pr-3 font-bold">{news.title}</p>
+                  <p className="text-slate-600 font-mono pb-4">{newsItem.date}</p>
+                  <p className="pr-3 font-bold">{newsItem.title}</p>
                 </div>
               </Link>
             </li>

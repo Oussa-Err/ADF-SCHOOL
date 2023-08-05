@@ -49,9 +49,10 @@ const Header = () => {
                 onClick={() => setDropToggle(false)}
                 className="fixed w-screen h-screen inset-0 bg-black bg-opacity-50 "
               ></div>
-              <div className={`lg:absolute top-10 drop-shadow-lg bg-gray-200 rounded-lg p-6 flex flex-col transition-all duration-300 transform ${
-              dropToggle ? 'scale-y-100' : 'scale-y-0'
-            } origin-top`}
+              <div
+                className={`lg:absolute top-10 drop-shadow-lg bg-gray-200 rounded-lg p-6 flex flex-col transition-all duration-300 transform ${
+                  dropToggle ? "scale-y-100" : "scale-y-0"
+                } origin-top`}
               >
                 <Link
                   href="/adfSchool/aboutus"
@@ -72,7 +73,7 @@ const Header = () => {
                   Gouvernance
                 </Link>
                 <Link
-                  href={`/adfSchool/[${news.id}]`}
+                  href='/adfSchool/news'
                   className="hover:text-navbar  text-gray-800 font-serif relative p-3"
                 >
                   Nos actualités
@@ -106,7 +107,7 @@ const Header = () => {
             />
           )}
           {toggle && (
-            <div className="bg-orange-400 bg-opacity-30 backdrop-blur-lg absolute w-screen h-screen top-0 items-center pl-9 md:pl-0 right-0 z-49 flex md:justify-around md:items-center">
+            <div className="bg-orange-400 bg-opacity-30 filter absolute w-screen h-screen top-0 items-center pl-9 md:pl-0 right-0 z-49 flex md:justify-around md:items-center">
               <div className="flex flex-col text-slate-900 z-48 gap-10   ">
                 <Link
                   href="/"
@@ -169,6 +170,13 @@ const Header = () => {
                         onClick={() => setToggle(false)}
                       >
                         Gouvernance
+                      </Link>
+                      <Link
+                        href='/adfSchool/news'
+                        className="hover:text-veryTop p-3"
+                        onClick={() => setToggle(false)}
+                      >
+                        Nos actualités
                       </Link>
                     </div>
                   </>
