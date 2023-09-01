@@ -1,51 +1,29 @@
-import { useRouter } from 'next/router';
-import news from "../../data/news.json";
+import { useRouter } from "next/router";
 
-export const getStaticPaths = async () => {
-  const res = await fetch('http://localhost:3000')
-  const data = await res.json();
-
-  const paths = data.map((news) => () => {
-    return {
-      params : {id: news.id.toString()}
-    }
-  })
-
-  return {
-    paths,
-    fallback: false
-  }
-}
-
-export async function getStaticProps({ param }) {
-  const req = await fetch('http://localhost:3000/adfSchool/news/' + news.id);
+export async function getServerSideProps({ params }) {
+  const req = await fetch(
+    "http://localhost:3000/adfSchool/news/" + params.id
+  );
   const data = await req.json();
 
   return {
-    props: { news: news.id.toString() },
+    props: { news: data },
   };
 }
 
-
-export default function New({ news }) {
+export default function NewItem({ news }) {
   const router = useRouter();
   const { id } = router.query;
-  
-
   return (
     <>
-      <h1>
+      <main> {id}
+        <img src={news.image} alt="f" />
         <div>
-          <img src={news.image} alt="f" />
-          <div>
-            <h1>{news.title}</h1>
-            <p>{news.date}</p>
-            <p>{news.description}</p>
-          </div>
+          <h1>{news.title}</h1>
+          <p>{news.date}</p>
+          <p>{news.description}</p>
         </div>
-      </h1>
+      </main>
     </>
   );
 }
-
-// export default New;

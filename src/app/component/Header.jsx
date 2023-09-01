@@ -23,13 +23,13 @@ const Header = () => {
           </Link>
         </div>
         <nav className="hidden lg:flex relative w-1/2 gap-3 justify-around text-[1.2rem] font-bold font-mono">
-          <Link href="/" className="hover:text-veryTop">
+          <Link href="/" className="hover:text-veryTop transition-colors duration-300 ease-in-out">
             Acceuil
           </Link>
           {dropToggle ? (
             <Link
               href=""
-              className="hover:text-veryTop z-40 relative transition duration-300 ease-in-out"
+              className="hover:text-veryTop z-40 relative transition-colors duration-300 ease-in-out"
               onClick={() => setDropToggle(false)}
             >
               ADF school
@@ -37,7 +37,7 @@ const Header = () => {
           ) : (
             <Link
               href=""
-              className="hover:text-veryTop z-40 relative transition duration-300 ease-in-out"
+              className="hover:text-veryTop z-40 relative transition-colors duration-300 ease-in-out"
               onClick={() => setDropToggle(true)}
             >
               ADF school
@@ -56,35 +56,35 @@ const Header = () => {
               >
                 <Link
                   href="/adfSchool/aboutus"
-                  className="hover:text-navbar text-gray-800 font-serif relative p-3"
+                  className="hover:text-navbar text-gray-800 font-serif relative p-3 transition-colors duration-300 ease-in-out"
                 >
                   Qui sommes Nous?
                 </Link>
                 <Link
                   href="/adfSchool/organisation"
-                  className="hover:text-navbar text-gray-800 font-serif relative p-3"
+                  className="hover:text-navbar text-gray-800 font-serif relative p-3 transition-colors duration-300 ease-in-out"
                 >
                   Organisation
                 </Link>
                 <Link
                   href="/adfSchool/gouvernance"
-                  className="hover:text-navbar  text-gray-800 font-serif relative p-3"
+                  className="hover:text-navbar  text-gray-800 font-serif relative p-3 transition-colors duration-300 ease-in-out"
                 >
                   Gouvernance
                 </Link>
                 <Link
-                  href='/adfSchool/news'
-                  className="hover:text-navbar  text-gray-800 font-serif relative p-3"
+                  href="/adfSchool/news"
+                  className="hover:text-navbar  text-gray-800 font-serif relative p-3 transition-colors duration-300 ease-in-out"
                 >
                   Nos actualités
                 </Link>
               </div>
             </>
           )}
-          <Link href="/formation" className="hover:text-veryTop">
+          <Link href="/formation" className="hover:text-veryTop transition-colors duration-300 ease-in-out">
             Formation
           </Link>
-          <Link href="/contact" className="hover:text-veryTop">
+          <Link href="/contact" className="hover:text-veryTop transition-colors duration-300 ease-in-out">
             Contact
           </Link>
         </nav>
@@ -117,7 +117,7 @@ const Header = () => {
                 </Link>
                 <Link
                   href="/"
-                  className="font-mono font-semibold text-xl hover:text-veryTop"
+                  className="font-mono font-semibold text-xl hover:text-veryTop transition-colors duration-300 ease-in-out"
                   onClick={() => setToggle(false)}
                 >
                   Acceuil
@@ -152,28 +152,28 @@ const Header = () => {
                     <div className="relative bg-white bg-opacity-30 rounded-lg p-2 md:p-6 flex flex-col transition-all ease-in-out duration-200">
                       <Link
                         href="/adfSchool/aboutus"
-                        className="hover:text-veryTop p-3"
+                        className="hover:text-veryTop p-3 transition-colors duration-300 ease-in-out"
                         onClick={() => setToggle(false)}
                       >
                         Qui sommes Nous?
                       </Link>
                       <Link
                         href="/adfSchool/organisation"
-                        className="hover:text-veryTop p-3"
+                        className="hover:text-veryTop p-3 transition-colors duration-300 ease-in-out"
                         onClick={() => setToggle(false)}
                       >
                         Organisation
                       </Link>
                       <Link
                         href="/adfSchool/gouvernance"
-                        className="hover:text-veryTop p-3"
+                        className="hover:text-veryTop p-3 transition-colors duration-300 ease-in-out"
                         onClick={() => setToggle(false)}
                       >
                         Gouvernance
                       </Link>
                       <Link
-                        href='/adfSchool/news'
-                        className="hover:text-veryTop p-3"
+                        href="/adfSchool/news"
+                        className="hover:text-veryTop p-3 transition-colors duration-300 ease-in-out"
                         onClick={() => setToggle(false)}
                       >
                         Nos actualités
@@ -183,14 +183,14 @@ const Header = () => {
                 )}
                 <Link
                   href="/formation"
-                  className="font-mono font-semibold text-xl hover:text-veryTop"
+                  className="font-mono font-semibold text-xl hover:text-veryTop transition-colors duration-300 ease-in-out"
                   onClick={() => setToggle(false)}
                 >
                   Formation
                 </Link>
                 <Link
                   href="/contact"
-                  className="font-mono font-semibold text-xl hover:text-veryTop "
+                  className="font-mono font-semibold text-xl hover:text-veryTop transition-colors duration-300 ease-in-out"
                   onClick={() => setToggle(false)}
                 >
                   Contact

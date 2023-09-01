@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import news from "../../public/data/news.json";
+import news from "./data/news.json"
 
 export default function Home() {
   return (
     <main className="bg-gradient-to-b from-heroBg to-white">
-      <div className="sm:px-24 md:px-14 lg:flex-row gap-24  pt-16 sm:pt-38 flex items-center flex-col">
+      <div className="sm:px-24 md:px-14 lg:flex-row gap-24 sm:pt-38 flex items-center flex-col">
         <h1 className="self-center w-full font-extrabold text-2xl sm:text-3xl lg:text-4xl px-5 text-veryTop">
           Empowering the Future: <br />
           <span className="text-emerald-800">
